@@ -45,6 +45,10 @@ li {
 
 /* Skip to Main Styling */
 
+.skip {
+    background-color: #00274C;
+}
+
 .skip a{
     background: white;
     color: #00274C;
@@ -80,13 +84,13 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-image: linear-gradient(90deg, #00274c 0%, transparent 50%, #00274c 100%);
 }
 
 .Topnav img {
     border: none;
     max-width: 20%;
     margin: 0;
-    background-color: #00274C;
     border-radius: 0;
     padding: 0;
 }
@@ -121,10 +125,7 @@ li {
     background-color: transparent;
 }
 
-
-
 nav{
-    /* background-color: rgba(0, 50, 106, 0.80); */
     background-image: url(/images/UMSI_CampusFall_UMSIBackpack_02.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -150,17 +151,22 @@ nav li{
 
 
 nav a:focus, nav a:hover {
-    /* outline: 2px solid #FFCB05; */
     text-decoration: underline #FFCB05;
     color: #FFCB05;
     outline-offset: 4px;
+    font-weight: bold;
 }
 
 nav a{
     color: #ffffff;
-    font-weight: bold;
+    font-weight: normal;
     text-decoration: none; 
     font-size: 9pt;
+}
+
+.active {
+    text-decoration: underline #ffffff;
+    font-weight: bolder;
 }
 
 
@@ -189,115 +195,60 @@ footer a {
 
 /*                                                                          STYLING FOR LAPTOP AND DESKTOP VIEW */
 
-
-
-
-
-
 @media screen and (min-width: 800px) {
     
     h1 {
         font-size: larger;
-        font-weight: bolder;
-        text-align: center;
-        padding: 10px;
     }
     
     h2, h3 {
         font-size: medium;
-        font-weight: bold;
-        color: #00274C;
     }
-    
-    p {
-        font-size: 9pt;
-        line-height: 1.5;
-    }
-    
-    img {
-        border: solid 5px #FFCB05;
-        padding: 10px;
-        margin: 20px;
-        border-top-right-radius: 30px;
-    }
-    
-    li {
-        margin-left: 50px;  
-    }
-    
-    .Topnav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+
+    .Topnav img {
+        width: 12%;
     }
 
 
     .search-bar {
         display: flex;
         align-items: center;
-        max-width: 50%;
+        width: 30%;
         padding-right: 10px;
     }
 
 
     .search-bar input {
         padding: 6px;
-        font-size: 16px;
-        border: 2px solid #FFCB05;
-        border-radius: 4px 0 0 4px;
-        width: 100%;
+        font-size: 18px;
+        height: 40px;
     }
 
     .search-bar button {
-        background-color: #FFCB05;
-        border: none;
-        padding: 6px 12px;
-        cursor: pointer;
-        border-radius: 0 4px 4px 0;
+        height: 40px;
+        width: 20%;
+        align-content: center;
     }
 
     .search-bar button img {
-        max-width: 20px; /* Small icon size */
-        background-color: transparent;
+        min-width: 50%;
     }
 
-    nav{
-        /* background-color: rgba(0, 50, 106, 0.80); */
-        background-image: url(/images/UMSI_CampusFall_UMSIBackpack_02.jpg);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        text-align: left;
-    }
 
     nav ul {
-        background-color: #00274c;
-        border: solid 2px #00174c;
-        padding: 10px 0;
-        display: flex;
         justify-content: center;
     }
 
     nav li{
         display: inline;
-        padding: 0 20px;
+        padding: 0 50px;
         height: 100%;
         vertical-align: middle;
     }
 
-
-    nav a:focus, nav a:hover {
-        /* outline: 2px solid #FFCB05; */
-        text-decoration: underline #FFCB05;
-        color: #FFCB05;
-        outline-offset: 4px;
-    }
-
     nav a{
-        color: #ffffff;
-        font-weight: bold;
-        text-decoration: none; 
+        font-size: large;
     }
-
 
 }
 

@@ -146,7 +146,7 @@ header {
 }
 
 nav{
-    background-image: url(/images/UMSI_CampusFall_UMSIBackpack_02.jpg);
+    background-image: url("https://alexis-camarena.github.io/client_project_html_f24//images/UMSI_CampusFall_UMSIBackpack_02.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     text-align: left;

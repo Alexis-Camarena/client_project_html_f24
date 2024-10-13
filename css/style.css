@@ -265,7 +265,7 @@ header section {
     background-color: #ffffff;
 }
 
-.resources div:hover, .resources div:focus {
+.altresources div:hover, .altresources div:focus {
     box-shadow: 0 0 20px #00274C;
 
 }
@@ -465,6 +465,7 @@ header section {
 .altsection p {
     margin-top: 10px; 
     color: #333;
+    text-align: center;
 }
 
 

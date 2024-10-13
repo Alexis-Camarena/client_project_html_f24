@@ -40,7 +40,6 @@ p {
 
 img {
     border: solid 5px #FFCB05;
-    margin: 10px;
     border-radius: 10px;
     width: 25%;
 }
@@ -55,7 +54,7 @@ section {
 }
 
 header {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 /*                                                                          STYLING FOR MOBILE VIEW (DEFAULT) */
@@ -208,9 +207,128 @@ header section {
 
 /* --------------------- START MAIN STYLING ------------------ */
 
+.sixgrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    gap: 5px;
+}
+
+.sixgrid div {
+    display: block;
+    text-align: center;
+}
+.sixgrid img {
+    width: 90%;
+    margin-bottom: 0;
+}
+
+.c1 {
+    grid-column: 1 / 3;
+}
+
+.c2 {
+    grid-column: 3 / 5;
+}
+
+.c3 {
+    grid-column: 5 / -1;
+}
+
+.c4 {
+    grid-column: 1 / 4;
+}
+
+.c5 {
+    grid-column: 4 / -1;
+}
+
+.c6 {
+    grid-column: 2 / 6;
+}
+
+
+
+
 
 /* Home unqiue styling */
 
+.resources {
+    margin: 10px 0;
+}
+
+.resources div { 
+    border: solid 1px #00274C;
+    border-radius: 15px;
+    padding: 10px 5px;
+    margin: 5px;
+    background-color: #ffffff;
+}
+
+.resources div:hover, .resources div:focus {
+    box-shadow: 0 0 20px #00274C;
+
+}
+
+.resources a {
+    color: #00274C;
+}
+
+.calendar-container {
+    display: flex;
+    justify-content: center;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px; 
+}
+
+.day , .date , .emptyDate {
+    padding: 10px;
+    background-color: #f0f0f0;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.day {
+    font-weight: bold;
+    background-color: #00274C;
+    color: #ffffff;
+}
+
+.date {
+    background-color: #ffcd05a5;
+}
+
+.emptyDate {
+    background-color: #ffcd054d;
+}
+
+.activeDate {
+    background-color: #00274ca3;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.circle {
+    border: solid 3px #00274C;
+    border-radius: 100px;
+}
+
+.white {
+    border-color: #ffffff;
+}
+
+.eventDots {
+    display: flex;
+    justify-content: center;
+}
+
+.eventDots p {
+    margin: 3px  2px 0 2px;
+}
 
 
 
@@ -219,42 +337,7 @@ header section {
 .sectionBlock {
     border-top: dashed  2px #00274C;
     margin: 0 8px;
-    
-}
-
-.profiles {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    justify-items: center;
-}
-
-.profiles div {
-    display: block;
-    text-align: center;
-}
-.profiles img {
-    width: 90%;
-    margin-bottom: 0;
-}
-
-.p1 {
-    grid-column: 1 / 3;
-}
-
-.p2 {
-    grid-column: 3 / 5;
-}
-
-.p3 {
-    grid-column: 5 / -1;
-}
-
-.p4 {
-    grid-column: 1 / 4;
-}
-
-.p5 {
-    grid-column: 4 / -1;
+    align-items: center;
 }
 
 
@@ -334,6 +417,55 @@ header section {
 
 
 /* Student Wellbeing unique styling */
+
+.altsection {
+    margin: 20px 0;
+}
+
+.altsection article {
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+    padding: 15px; 
+    margin-bottom: 20px; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+}
+
+
+.altsection figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    margin: 10px 0;
+}
+
+.altsection img {
+    width: 100%;
+    border-radius: 5px;
+    border-color: #666;
+}
+
+
+.altsection figcaption {
+    font-size: 0.9rem; 
+    color: #666; 
+    margin-top: 5px; 
+}
+
+.altsection h3 {
+    margin-top: 10px;
+    color: #00274C;
+}
+
+
+.altsection p {
+    margin-top: 10px; 
+    color: #333;
+}
 
 
 

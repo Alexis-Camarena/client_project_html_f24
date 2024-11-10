@@ -59,6 +59,7 @@ header {
 
 
 
+
 /*                                                                          STYLING FOR MOBILE VIEW (DEFAULT) */
 
 
@@ -475,11 +476,17 @@ header section {
 /* ------------------- START FOOTER ELEMENTS ------------------ */
 
 footer {
-    padding: 10px 0;
-    background-color: #00274c;
     display: flex;
-    justify-content: center;
+    grid-template-columns: 20% auto;
+    padding: 10px;
+    background-color: #00274c;
     color: white;
+    align-items: center;
+}
+
+footer img {
+    max-height: 100px;
+    width: auto;
 }
 
 footer a {

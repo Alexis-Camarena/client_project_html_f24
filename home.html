@@ -19,9 +19,10 @@
             <div class="Topnav">
                 <img src="images/umich-logo.png" alt="University of Michigan Logo">
                 
-                <form id="search-input" action="#" method="get" class="search-bar">
-                    <input type="text" name="search" placeholder="Search the portal..." aria-label="Search the Student Success Portal">
-                    <button type="submit"><img src="images/search-icon.png" alt="Search"></button>
+                <form action="#" method="get" class="search-bar">
+                    <input id="searchInput" type="text" name="search" placeholder="Search the portal..." aria-label="Search the Student Success Portal">
+                    <div id="suggestionsList" class="suggestions-container"></div>
+                    <button type="submit" onclick="performSearch(event)"><img src="images/search-icon.png" alt="Search"></button>
                 </form>
             
             </div>
@@ -44,28 +45,34 @@
                 <article class="sixgrid resources">
                     <div  class="c4 altresources" tabindex="0">
                         <h3>Academic Resources:</h3>
+                        <img src="/images/headshot-filler.png" alt="">
                         <p>Access study guides, tutoring services, library resources, and tips on time management to excel in your coursework.</p>
                     </div>
                     <div class="c5 altresources" tabindex="0">
                         <h3>Physical Health:</h3> 
+                        <img src="/images/headshot-filler.png" alt="">
                         <p>Find information on gym memberships, fitness classes, and nutritional advice to maintain your physical well-being.</p>
                     </div>
                     <div class="c4 altresources" tabindex="0">
                         <h3>Mental Health:</h3> 
+                        <img src="/images/headshot-filler.png" alt="">
                         <p>Explore counseling services, stress management workshops, and mindfulness exercises to support your mental health.</p>
                     </div>
                     <div class="c5 altresources" tabindex="0">
                         <h3>Life Outside the Classroom:</h3> 
+                        <img src="/images/headshot-filler.png" alt="">
                         <p>Discover clubs, social events, and networking opportunities that enhance your graduate experience.</p>
                     </div>
                     <div class="c6 altresources" tabindex="0">
                         <h3>Contact:</h3> 
+                        <img src="/images/headshot-filler.png" alt="">
                         <p>Reach out to our support team for personalized guidance or to answer any questions you might have.</p>
                     </div>
                 </article>
             </div>
         </section>
 
+        <div class="asideMain">
         <section class="sectionBlock">
             <h2>Upcoming Events</h2>
             <div class="calendar-container">
@@ -91,9 +98,9 @@
                     <div class="date">4</div>
                     <div class="date" tabindex="0">5 
                         <div class="eventDots">
-                            <p class="circle"></p> 
-                            <p class="circle"></p> 
-                            <p class="circle"></p>
+                            <p class="circle" data-event="Workshop"></p>
+                            <p class="circle" data-event="Meeting"></p>
+                            <p class="circle" data-event="Networking"></p>
                         </div>
                     </div>
                     <div class="date">6</div>
@@ -105,7 +112,7 @@
                     <div class="date">12</div>
                     <div class="date activeDate" tabindex="0">13
                         <div class="eventDots">
-                            <p class="circle white"></p> 
+                            <p class="circle white" data-event="Workshop"></p> 
                         </div>
                     </div>
                     <div class="date">14</div>
@@ -114,24 +121,24 @@
                     <div class="date">17</div>
                     <div class="date" tabindex="0">18
                         <div class="eventDots">
-                            <p class="circle"></p> 
-                            <p class="circle"></p> 
+                            <p class="circle" data-event="Workshop"></p> 
+                            <p class="circle" data-event="Workshop"></p> 
                         </div>
                     </div>
                     <div class="date">19</div>
                     <div class="date" tabindex="0">20
                         <div class="eventDots">
-                            <p class="circle"></p> 
-                            <p class="circle"></p> 
-                            <p class="circle"></p> 
+                            <p class="circle" data-event="Workshop"></p> 
+                            <p class="circle" data-event="Workshop"></p> 
+                            <p class="circle" data-event="Workshop"></p> 
                         </div>
                     </div>
                     <div class="date">21</div>
                     <div class="date">22</div>
                     <div class="date" tabindex="0">23
                         <div class="eventDots">
-                            <p class="circle"></p> 
-                            <p class="circle"></p>
+                            <p class="circle" data-event="Workshop"></p> 
+                            <p class="circle" data-event="Workshop"></p>
                         </div> 
                     </div>
                     <div class="date">24</div>
@@ -139,8 +146,8 @@
                     <div class="date">26</div>
                     <div class="date" tabindex="0">27
                         <div class="eventDots">
-                            <p class="circle"></p> 
-                            <p class="circle"></p> 
+                            <p class="circle" data-event="Workshop"></p> 
+                            <p class="circle" data-event="Workshop"></p> 
                         </div>
                     </div>
                     <div class="date">28</div>
@@ -159,7 +166,7 @@
             <h2>Career Development</h2>
             <p>Prepare for your career post-graduation with resources from our Career Development Center. We offer resume reviews, interview preparation, and connections with industry professionals.</p>
             
-            <article class="sixgrid resources">
+            <article class="sixgrid resources flexRow">
                 <div class="c1">
                     <h3>Job Boards:</h3>
                     <p>Access exclusive job listings for graduate students.</p>
@@ -174,12 +181,14 @@
                 </div>
             </article>
         </section>
+    </div>
         
+    <div class="threeCol">
         <section class="sectionBlock">
             <h2>Financial Aid and Scholarships</h2>
             <p>Explore various funding options available to support your graduate studies. Our financial aid office provides resources on scholarships, grants, and loans tailored for graduate students.</p>
             
-            <article class="sixgrid resources">
+            <article class="sixgrid resources flexRow">
                 <div class="c1">
                     <h3>Scholarship Opportunities:</h3>
                     <p>Discover scholarships specific to your program or background.</p>
@@ -199,7 +208,7 @@
             <h2>Research and Innovation</h2>
             <p>Engage in groundbreaking research and innovation at UM. Explore opportunities to collaborate with faculty, participate in research projects, and present your work at conferences.</p>
             
-            <article class="sixgrid resources">
+            <article class="sixgrid resources flexRow">
                 <div class="c1">
                     <h3>Research Grants:</h3>
                     <p>Apply for funding to support your research endeavors.</p>
@@ -219,7 +228,7 @@
             <h2>International Student Support</h2>
             <p>If you are an international student, find support services tailored to your needs. We offer visa guidance, cultural integration programs, and language support.</p>
             
-            <article class="sixgrid resources">
+            <article class="sixgrid resources flexRow">
                 <div class="c1">
                     <h3>Visa Assistance:</h3> 
                     <p>Get help with maintaining your student visa status and understanding work regulations.</p>
@@ -235,10 +244,94 @@
             </article>
         
         </section>
+    </div>
         
     </main>
     <footer>
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a> | <span id="year"></span></p>
     </footer>
 </body>
+
+
+<script>
+
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+
+
+
+    // Keywords and their associated page URLs
+    const pages = {
+        "home": "home.html",
+        "um grad success navigator": "home.html",
+        "student success": "home.html",
+        "academic resources": "home.html",
+        "physical health": "home.html",
+        "mental health": "home.html",
+        "life outside the classroom": "home.html",
+        "events": "home.html",
+        "career development": "home.html",
+        "financial aid": "home.html",
+        "scholarships": "home.html",
+        "research": "home.html",
+        "innovation": "home.html",
+        "international support": "home.html",
+        
+        "academic support": "academic_support.html",
+        "study guides": "academic_support.html",
+        "tutoring": "academic_support.html",
+        "library resources": "academic_support.html",
+        "time management": "academic_support.html",
+        "academic advising": "academic_support.html",
+        "degree requirements": "academic_support.html",
+        "msi academic advising": "academic_support.html",
+        
+        "student life": "student_life.html",
+        "student organizations": "student_life.html",
+        "cultural groups": "student_life.html",
+        "academic groups": "student_life.html",
+        "professional groups": "student_life.html",
+        "social groups": "student_life.html",
+        "arts and culture": "student_life.html",
+        "umma": "student_life.html",
+        "School of Music Theatre & Dance": "student_life.html",
+        "community engagement": "student_life.html",
+        "volunteering": "student_life.html",
+        "career services": "student_life.html",
+        "local resources": "student_life.html",
+        
+        "student well-being": "student_wellbeing.html",
+        "well-being": "student_wellbeing.html",
+        "university health service": "student_wellbeing.html",
+        "uhs": "student_wellbeing.html",
+        "recreational sports": "student_wellbeing.html",
+        "nutrition resources": "student_wellbeing.html",
+        "caps": "student_wellbeing.html",
+        "counseling": "student_wellbeing.html",
+        "wellness coaching": "student_wellbeing.html",
+        "mindfulness": "student_wellbeing.html",
+        "support groups": "student_wellbeing.html",
+        "student life well-being": "student_wellbeing.html",
+    };
+
+
+    // Function to perform search
+    function performSearch(event) {
+        const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+
+        event.preventDefault();
+        
+        // Search for a matching keyword
+        for (const keyword in pages) {
+            if (searchQuery.includes(keyword)) {
+                console.log("redirecting to:", pages[keyword])
+                window.location.href = pages[keyword];
+                return;
+            }
+            else {
+                window.location.href = '404.html'
+            }
+        }
+        
+    }
+</script>
 </html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>404 Error Page</title>
+</head>
+<body>
+    <!-- 
+    Header: 
+     All four pages must link together using a consistent navigation that is an unordered list of links. 
+     You must include a Skip to Main content link on every page. 
+    -->
+    <header>
+        <nav>
+            <div class="skip"><a href="#main-content">Skip to Main Content</a></div>
+            <div class="Topnav">
+                <img src="images/umich-logo.png" alt="University of Michigan Logo">
+                
+                <form action="#" method="get" class="search-bar">
+                    <input id="searchInput" type="text" name="search" placeholder="Search the portal..." aria-label="Search the Student Success Portal">
+                    <div id="suggestionsList" class="suggestions-container"></div>
+                    <button type="submit" onclick="performSearch(event)"><img src="images/search-icon.png" alt="Search"></button>
+                </form>
+            
+            </div>
+            <ul>
+                <li><a href = "home.html">Home</a></li>
+                <li><a href = "academic_support.html">Academic Support</a></li>
+                <li><a href = "student_life.html">Student Life</a> </li>
+                <li><a href = "student_wellbeing.html">Student Well-Being</a></li>
+            </ul>
+        </nav>
+        <h1>404 Page Not Found</h1>
+    </header>
+
+    <main id="main-content">
+        
+        <h2>We couldn't find what you were looking for. Feel free to search or use the navigation above!</h2>
+
+    </main>
+
+
+    <footer>
+        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a> | <span id="year"></span></p>
+    </footer>
+</body>
+
+
+<script>
+
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    
+    // Keywords and their associated page URLs
+    const pages = {
+        "home": "home.html",
+        "um grad success navigator": "home.html",
+        "student success": "home.html",
+        "academic resources": "home.html",
+        "physical health": "home.html",
+        "mental health": "home.html",
+        "life outside the classroom": "home.html",
+        "events": "home.html",
+        "career development": "home.html",
+        "financial aid": "home.html",
+        "scholarships": "home.html",
+        "research": "home.html",
+        "innovation": "home.html",
+        "international support": "home.html",
+        
+        "academic support": "academic_support.html",
+        "study guides": "academic_support.html",
+        "tutoring": "academic_support.html",
+        "library resources": "academic_support.html",
+        "time management": "academic_support.html",
+        "academic advising": "academic_support.html",
+        "degree requirements": "academic_support.html",
+        "msi academic advising": "academic_support.html",
+        
+        "student life": "student_life.html",
+        "student organizations": "student_life.html",
+        "cultural groups": "student_life.html",
+        "academic groups": "student_life.html",
+        "professional groups": "student_life.html",
+        "social groups": "student_life.html",
+        "arts and culture": "student_life.html",
+        "umma": "student_life.html",
+        "School of Music Theatre & Dance": "student_life.html",
+        "community engagement": "student_life.html",
+        "volunteering": "student_life.html",
+        "career services": "student_life.html",
+        "local resources": "student_life.html",
+        
+        "student well-being": "student_wellbeing.html",
+        "well-being": "student_wellbeing.html",
+        "university health service": "student_wellbeing.html",
+        "uhs": "student_wellbeing.html",
+        "recreational sports": "student_wellbeing.html",
+        "nutrition resources": "student_wellbeing.html",
+        "caps": "student_wellbeing.html",
+        "counseling": "student_wellbeing.html",
+        "wellness coaching": "student_wellbeing.html",
+        "mindfulness": "student_wellbeing.html",
+        "support groups": "student_wellbeing.html",
+        "student life well-being": "student_wellbeing.html",
+    };
+
+
+    // Function to perform search
+    function performSearch(event) {
+        const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+
+        event.preventDefault();
+        
+        // Search for a matching keyword
+        for (const keyword in pages) {
+            if (searchQuery.includes(keyword)) {
+                console.log("redirecting to:", pages[keyword])
+                window.location.href = pages[keyword];
+                return;
+            }
+            else {
+                window.location.href = '404.html'
+            }
+        }
+        
+    }
+</script>
+</html>

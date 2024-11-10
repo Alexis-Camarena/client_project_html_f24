@@ -267,10 +267,6 @@ header section {
     width: 100%;
 }
 
-.resources img {
-    display: none;
-}
-
 .altresources article div:hover, .altresources article div:focus {
     box-shadow: 0 0 20px #00274C;
 
@@ -413,8 +409,12 @@ header section {
 
 .tutorsection {
     text-align: center;
-    padding-bottom: 20px;
 }
+
+
+
+/* Student Life unique styling */
+
 
 
 
@@ -487,184 +487,70 @@ footer a {
 }
 
 
-/*                                                                          STYLING FOR TABLET OR DESKTOP VIEW */
 
 
-@media screen and (min-width: 750px) {
+/* Tablet/Desktop View Enhancements */
+@media screen and (min-width: 800px) {
     
+    /* Increase font sizes for headings */
     h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
         font-size: 1.5rem;
     }
-    
-    h2, h3 {
-        font-size: medium;
+
+    h3 {
+        font-size: 1.2rem;
     }
 
+    /* Resize images in Topnav for larger screens */
     .Topnav img {
-        width: 12%;
+        width: 15%;
     }
 
+    /* Center align navigation items */
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+    
+    /* Adjust navigation links for better spacing */
+    nav li {
+        padding: 0 20px;
+        font-size: 1.1rem;
+    }
 
+    /* Make search-bar taller and wider on larger screens */
     .search-bar {
         display: flex;
-        align-items: center;
-        width: 30%;
-        padding-right: 10px;
+        width: 40%;
     }
 
-
     .search-bar input {
-        padding: 6px;
-        font-size: 18px;
-        height: 40px;
+        font-size: 1rem;
+        padding: 8px;
     }
 
     .search-bar button {
-        height: 40px;
-        width: 20%;
-        align-content: center;
+        padding: 10px;
     }
 
-    .search-bar button img {
-        min-width: 50%;
-    }
-
-    nav ul {
-        justify-content: center;
-    }
-
-    nav li{
-        display: inline;
-        padding: 0 40px;
-        height: 100%;
-        vertical-align: middle;
-    }
-
-    nav a{
-        font-size: 1rem;
-    }
-
-
-    /* Main page unique styling */
-
-    .date {
-        padding: 5px 15px 25px 15px;
-        height: 100px;
-    }
-
-    .day {
-        padding: 15px;
-    }
-
-    .circle {
-        border: none;
-    }
-
-    .eventDots {
-        flex-direction: column;
-    }
-    
-    .eventDots p {
-        margin: 0;
-    }
-    
-
-    .circle::before {
-        content: attr(data-event);
-        color: #00274C;   
-        font-size: 0.6rem;
-    }
-
-    .circle.white::before {
-        color: #ffffff; 
-    }
-
-    .resources img {
-        display: inline;
-        width: 60%;
-        margin: 10px;
-    }
-
-
-
-    /* academic support */
-
-    .degreeReqs {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-
-    /* General */
-
-    .altsection img {
-       max-height: 80%;
-    }
-
-    .optimalMain {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .asideMain {
-        display: grid;
-        grid-template-columns: 75% 25%; 
-    }
-
-    .threeCol {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-
+    /* Adjust sixgrid layout for larger screens */
     .sixgrid {
-        display: flex;
-        justify-content: center;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
     
-    .flexRow {
-        flex-direction: column;
+    /* Calendar adjustments */
+    .calendar {
+        grid-template-columns: repeat(7, 1fr);
     }
 
-    .resources div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-    }
 
 }
 
 
-/* optimize calendar */
-
-@media screen and (min-width: 1000px) {
-
-    .date {
-        padding: 10px 30px 50px 30px;
-        max-height: 100px;
-    }
-
-    .day {
-        padding: 15px;
-    }
-
-    .circle {
-        border: none;
-    }
-
-    .eventDots {
-        flex-direction: column;
-    }
-    
-    .eventDots p {
-        margin: 0;
-    }
-    
-
-    .circle::before {
-        content: attr(data-event);
-        color: #00274C;   
-        font-size: 0.6rem;
-    }
-}
 
 

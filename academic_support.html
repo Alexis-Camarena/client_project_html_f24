@@ -21,9 +21,10 @@
             <div class="Topnav">
                 <img src="images/umich-logo.png" alt="University of Michigan Logo">
                 
-                <form id="searhc-input" action="#" method="get" class="search-bar">
-                    <input type="text" name="search" placeholder="Search the portal..." aria-label="Search the Student Success Portal">
-                    <button type="submit"><img src="images/search-icon.png" alt="Search"></button>
+                <form action="#" method="get" class="search-bar">
+                    <input id="searchInput" type="text" name="search" placeholder="Search the portal..." aria-label="Search the Student Success Portal">
+                    <div id="suggestionsList" class="suggestions-container"></div>
+                    <button type="submit" onclick="performSearch(event)"><img src="images/search-icon.png" alt="Search"></button>
                 </form>
             
             </div>
@@ -43,40 +44,81 @@
     <!-- Main -->
     <main id="main-content">
 
-        <section class="sectionBlock">
-            <h2>MSI Academic Advising</h2>
-            
 
-            <h3>Advising Team</h3>
-            <article class="sixgrid" aria-label="Advising Team">
-                <div class="c1">
-                    <img src="images/headshot-filler.png" alt="Headshot of UMSI Advisor 1, Name">
-                    <p>Name</p>
-                    <p>[Introduction]</p>
-                </div>
+        <div class="optimalMain">
+            <section class="sectionBlock">
+                <h2>MSI Academic Advising</h2>
+                
 
-                <div class="c2">
-                    <img src="images/headshot-filler.png" alt="Headshot of UMSI Advisor 2, Name">
-                    <p>Name</p>
-                    <p>[Introduction]</p>
-                </div>
+                <h3>Advising Team</h3>
 
-                <div class="c3">
-                    <img src="images/headshot-filler.png" alt="Headshot of UMSI Advisor 3, Name">
-                    <p>Name</p>
-                    <p>[Introduction]</p>
-                </div>
+                <article class="tutorsection">
+                    <p>In partnership with our UMSI faculty, the UMSI Peer Tutoring program is an opportunity for UMSI students and students taking UMSI courses to engage with peer tutors and receive assistance and support in UMSI courses. </p>
+                </article>
 
-            </article>
+                <article class="sixgrid" aria-label="Advising Team">
+                    <div class="c1">
+                        <img src="images/headshot-filler.png" alt="Headshot of UMSI Advisor 1, Name">
+                        <p>Name</p>
+                        <p>[Introduction]</p>
+                    </div>
+
+                    <div class="c2">
+                        <img src="images/headshot-filler.png" alt="Headshot of UMSI Advisor 2, Name">
+                        <p>Name</p>
+                        <p>[Introduction]</p>
+                    </div>
+
+                    <div class="c3">
+                        <img src="images/headshot-filler.png" alt="Headshot of UMSI Advisor 3, Name">
+                        <p>Name</p>
+                        <p>[Introduction]</p>
+                    </div>
+
+                </article>
 
 
-            
-            <article class="buttons" aria-label="Advising Scheduling Buttons">
-                <a href="https://www.google.com/url?q=https%3A%2F%2Fsi-umich.navigate.eab.com&sa=D&sntz=1&usg=AOvVaw2hrgCEntX9a472rfp4p9kR">Schedule 1:1 Appointment</a>
-                <a href="https://www.google.com/url?q=https%3A%2F%2Fofficehours.it.umich.edu%2Fqueue%2F1001&sa=D&sntz=1&usg=AOvVaw3elZHqcKWT2i3m1Yy7q879">Drop-in 1:1 Appointment</a>
-            </article>
-            
-        </section>
+                
+                <article class="buttons" aria-label="Advising Scheduling Buttons">
+                    <a href="https://www.google.com/url?q=https%3A%2F%2Fsi-umich.navigate.eab.com&sa=D&sntz=1&usg=AOvVaw2hrgCEntX9a472rfp4p9kR">Schedule 1:1 Appointment</a>
+                    <a href="https://www.google.com/url?q=https%3A%2F%2Fofficehours.it.umich.edu%2Fqueue%2F1001&sa=D&sntz=1&usg=AOvVaw3elZHqcKWT2i3m1Yy7q879">Drop-in 1:1 Appointment</a>
+                </article>
+                
+            </section>
+
+            <section class="sectionBlock">
+                <h2>Academic Success and Tutoring</h2>
+                
+
+                <article class="tutorsection">
+                    <h3>Academic Sucess Team</h3>
+                    <p>In partnership with our UMSI faculty, the UMSI Peer Tutoring program is an opportunity for UMSI students and students taking UMSI courses to engage with peer tutors and receive assistance and support in UMSI courses. </p>
+                    
+                </article>
+
+                <article class="sixgrid" aria-label="Tutoring Team">
+                    <div class="c4">
+                        <img src="images/headshot-filler.png" alt="Headshot of UMSI Tutor 1, Name">
+                        <p>Name</p>
+                        <p>[Introduction]</p>
+                    </div>
+
+                    <div class="c5">
+                        <img src="images/headshot-filler.png" alt="Headshot of UMSI Tutor 2, Name">
+                        <p>Name</p>
+                        <p>[Introduction]</p>
+                    </div>
+
+                </article>
+
+                <article class="tutorsection">
+                    <div class="buttons"><a href = "">Apply for a Tutor Here!</a></div>
+                </article>
+            </section>
+        </div>
+
+
+
 
         <section class="sectionBlock">
             <h2>MSI Degree Requirments</h2>
@@ -121,47 +163,97 @@
             </article>
             
         </section>
-
-        <section class="sectionBlock">
-            <h2>Academic Success and Tutoring</h2>
             
 
-            <article class="tutorsection">
-                <h3>Connect with a Tutor</h3>
-                <p>In partnership with our UMSI faculty, the UMSI Peer Tutoring program is an opportunity for UMSI students and students taking UMSI courses to engage with peer tutors and receive assistance and support in UMSI courses. </p>
-
-                <div class="buttons"><a href = "">Apply for a Tutor Here!</a></div>
-                
-            </article>
-
-
-            <h3>Academic Sucess Team</h3>
-            <article class="sixgrid" aria-label="Tutoring Team">
-                <div class="c4">
-                    <img src="images/headshot-filler.png" alt="Headshot of UMSI Tutor 1, Name">
-                    <p>Name</p>
-                    <p>[Introduction]</p>
-                </div>
-
-                <div class="c5">
-                    <img src="images/headshot-filler.png" alt="Headshot of UMSI Tutor 2, Name">
-                    <p>Name</p>
-                    <p>[Introduction]</p>
-                </div>
-
-            </article>
-        </section>
-            
-
-    
     </main>
 
 
     <!-- Footer -->
     <footer>
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a> | <span id="year"></span></p>
     </footer>
-    
 </body>
 
+
+<script>
+
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+
+
+
+    // Keywords and their associated page URLs
+    const pages = {
+        "home": "home.html",
+        "um grad success navigator": "home.html",
+        "student success": "home.html",
+        "academic resources": "home.html",
+        "physical health": "home.html",
+        "mental health": "home.html",
+        "life outside the classroom": "home.html",
+        "events": "home.html",
+        "career development": "home.html",
+        "financial aid": "home.html",
+        "scholarships": "home.html",
+        "research": "home.html",
+        "innovation": "home.html",
+        "international support": "home.html",
+        
+        "academic support": "academic_support.html",
+        "study guides": "academic_support.html",
+        "tutoring": "academic_support.html",
+        "library resources": "academic_support.html",
+        "time management": "academic_support.html",
+        "academic advising": "academic_support.html",
+        "degree requirements": "academic_support.html",
+        "msi academic advising": "academic_support.html",
+        
+        "student life": "student_life.html",
+        "student organizations": "student_life.html",
+        "cultural groups": "student_life.html",
+        "academic groups": "student_life.html",
+        "professional groups": "student_life.html",
+        "social groups": "student_life.html",
+        "arts and culture": "student_life.html",
+        "umma": "student_life.html",
+        "School of Music Theatre & Dance": "student_life.html",
+        "community engagement": "student_life.html",
+        "volunteering": "student_life.html",
+        "career services": "student_life.html",
+        "local resources": "student_life.html",
+        
+        "student well-being": "student_wellbeing.html",
+        "well-being": "student_wellbeing.html",
+        "university health service": "student_wellbeing.html",
+        "uhs": "student_wellbeing.html",
+        "recreational sports": "student_wellbeing.html",
+        "nutrition resources": "student_wellbeing.html",
+        "caps": "student_wellbeing.html",
+        "counseling": "student_wellbeing.html",
+        "wellness coaching": "student_wellbeing.html",
+        "mindfulness": "student_wellbeing.html",
+        "support groups": "student_wellbeing.html",
+        "student life well-being": "student_wellbeing.html",
+    };
+
+
+    // Function to perform search
+    function performSearch(event) {
+        const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+
+        event.preventDefault();
+        
+        // Search for a matching keyword
+        for (const keyword in pages) {
+            if (searchQuery.includes(keyword)) {
+                console.log("redirecting to:", pages[keyword])
+                window.location.href = pages[keyword];
+                return;
+            }
+            else {
+                window.location.href = '404.html'
+            }
+        }
+        
+    }
+</script>
 </html>

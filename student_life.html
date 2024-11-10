@@ -21,9 +21,10 @@
             <div class="Topnav">
                 <img src="images/umich-logo.png" alt="University of Michigan Logo">
                 
-                <form id="searhc-input" action="#" method="get" class="search-bar">
-                    <input type="text" name="search" placeholder="Search the portal..." aria-label="Search the Student Success Portal">
-                    <button type="submit"><img src="images/search-icon.png" alt="Search"></button>
+                <form action="#" method="get" class="search-bar">
+                    <input id="searchInput" type="text" name="search" placeholder="Search the portal..." aria-label="Search the Student Success Portal">
+                    <div id="suggestionsList" class="suggestions-container"></div>
+                    <button type="submit" onclick="performSearch(event)"><img src="images/search-icon.png" alt="Search"></button>
                 </form>
             
             </div>
@@ -92,69 +93,153 @@
             </article>
         </section>
         
-        <section class="sectionBlock">
-            <h2>Career Services</h2>
-            <p>Prepare for your future career with these resources:</p>
+        <div class="threeCol">
+            <section class="sectionBlock">
+                <h2>Career Services</h2>
+                <p>Prepare for your future career with these resources:</p>
+                
+                <article class="sixgrid resources flexRow">
+                    <div class="c4">
+                        <h3><a href="https://careercenter.umich.edu/">Career Center</a></h3>
+                        <p>Access career counseling, job search resources, and workshops.</p>
+                    </div>
+                    <div class="c5">
+                        <h3><a href="https://careers.umich.edu/search-jobs">University Employment Opportunities</a></h3>
+                        <p>Explore job openings and internships at UM.</p>
+                    </div>
+                </article>
+            </section>
             
-            <article class="sixgrid resources">
-                <div class="c4">
-                    <h3><a href="https://careercenter.umich.edu/">Career Center</a></h3>
-                    <p>Access career counseling, job search resources, and workshops.</p>
-                </div>
-                <div class="c5">
-                    <h3><a href="https://careers.umich.edu/search-jobs">University Employment Opportunities</a></h3>
-                    <p>Explore job openings and internships at UM.</p>
-                </div>
-            </article>
-        </section>
-        
-        <section class="sectionBlock">
-            <h2>Community Engagement</h2>
-            <p>Make a difference through community service and volunteering:</p>
+            <section class="sectionBlock">
+                <h2>Community Engagement</h2>
+                <p>Make a difference through community service and volunteering:</p>
+                
+                <article class="sixgrid resources flexRow">
+                    <div class="c1">
+                        <h3><a href="https://oami.umich.edu/">Community Service Programs</a></h3>
+                        <p>Find local volunteering opportunities and service projects.</p>
+                    </div>
+                    <div class="c2">
+                        <h3><a href="https://www.a2rotary.org/">Rotary Club of Ann Arbor</a></h3>
+                        <p>Get involved in local service initiatives and community projects.</p>
+                    </div>
+                    <div class="c3">
+                        <h3><a href="https://www.volunteermatch.org/search/orgs.jsp?l=Ann+Arbor%2C+MI%2C+USA&k=">Volunteer Ann Arbor</a></h3>
+                        <p>Explore various volunteer opportunities in the Ann Arbor area.</p>
+                    </div>
+                </article>
+            </section>
             
-            <article class="sixgrid resources">
-                <div class="c1">
-                    <h3><a href="https://oami.umich.edu/">Community Service Programs</a></h3>
-                    <p>Find local volunteering opportunities and service projects.</p>
-                </div>
-                <div class="c2">
-                    <h3><a href="https://www.a2rotary.org/">Rotary Club of Ann Arbor</a></h3>
-                    <p>Get involved in local service initiatives and community projects.</p>
-                </div>
-                <div class="c3">
-                    <h3><a href="https://www.volunteermatch.org/search/orgs.jsp?l=Ann+Arbor%2C+MI%2C+USA&k=">Volunteer Ann Arbor</a></h3>
-                    <p>Explore various volunteer opportunities in the Ann Arbor area.</p>
-                </div>
-            </article>
-        </section>
-        
-        <section class="sectionBlock">
-            <h2>Local Resources</h2>
-            <p>Navigate life in Ann Arbor with these local resources:</p>
-            
-            <article class="sixgrid resources">
-                <div class="c1">
-                    <h3><a href="https://www.annarbor.org/things-to-do/?gad_source=1&gbraid=0AAAAAD3G4lniZKL4deGdtzO-IkiFo0a7D&gclid=Cj0KCQjwlvW2BhDyARIsADnIe-IYJ9ZX9KhP00OiMsgpEo-SPFd0nWutpzc-1VyBm5sMVp43LdLIzrwaAiKVEALw_wcB">Explore Ann Arbor</a></h3>
-                    <p>Discover local attractions, dining, and shopping.</p>
-                </div>
-                <div class="c2">
-                    <h3><a href="https://www.yelp.com/search?find_loc=Ann+Arbor%2C+MI">Yelp Ann Arbor</a></h3>
-                    <p>Find reviews and recommendations for local businesses and services.</p>
-                </div>
-                <div class="c3">
-                    <h3><a href="https://www.annarbor.com/">Ann Arbor News</a></h3>
-                    <p>Stay updated on local news and events.</p>
-                </div>
-            </article>
-        </section>
+            <section class="sectionBlock">
+                <h2>Local Resources</h2>
+                <p>Navigate life in Ann Arbor with these local resources:</p>
+                
+                <article class="sixgrid resources flexRow">
+                    <div class="c1">
+                        <h3><a href="https://www.annarbor.org/things-to-do/?gad_source=1&gbraid=0AAAAAD3G4lniZKL4deGdtzO-IkiFo0a7D&gclid=Cj0KCQjwlvW2BhDyARIsADnIe-IYJ9ZX9KhP00OiMsgpEo-SPFd0nWutpzc-1VyBm5sMVp43LdLIzrwaAiKVEALw_wcB">Explore Ann Arbor</a></h3>
+                        <p>Discover local attractions, dining, and shopping.</p>
+                    </div>
+                    <div class="c2">
+                        <h3><a href="https://www.yelp.com/search?find_loc=Ann+Arbor%2C+MI">Yelp Ann Arbor</a></h3>
+                        <p>Find reviews and recommendations for local businesses and services.</p>
+                    </div>
+                    <div class="c3">
+                        <h3><a href="https://www.annarbor.com/">Ann Arbor News</a></h3>
+                        <p>Stay updated on local news and events.</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+
     </main>
 
 
     <!-- Footer -->
     <footer>
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a> | <span id="year"></span></p>
     </footer>
-    
 </body>
 
+
+<script>
+
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+
+
+
+    // Keywords and their associated page URLs
+    const pages = {
+        "home": "home.html",
+        "um grad success navigator": "home.html",
+        "student success": "home.html",
+        "academic resources": "home.html",
+        "physical health": "home.html",
+        "mental health": "home.html",
+        "life outside the classroom": "home.html",
+        "events": "home.html",
+        "career development": "home.html",
+        "financial aid": "home.html",
+        "scholarships": "home.html",
+        "research": "home.html",
+        "innovation": "home.html",
+        "international support": "home.html",
+        
+        "academic support": "academic_support.html",
+        "study guides": "academic_support.html",
+        "tutoring": "academic_support.html",
+        "library resources": "academic_support.html",
+        "time management": "academic_support.html",
+        "academic advising": "academic_support.html",
+        "degree requirements": "academic_support.html",
+        "msi academic advising": "academic_support.html",
+        
+        "student life": "student_life.html",
+        "student organizations": "student_life.html",
+        "cultural groups": "student_life.html",
+        "academic groups": "student_life.html",
+        "professional groups": "student_life.html",
+        "social groups": "student_life.html",
+        "arts and culture": "student_life.html",
+        "umma": "student_life.html",
+        "School of Music Theatre & Dance": "student_life.html",
+        "community engagement": "student_life.html",
+        "volunteering": "student_life.html",
+        "career services": "student_life.html",
+        "local resources": "student_life.html",
+        
+        "student well-being": "student_wellbeing.html",
+        "well-being": "student_wellbeing.html",
+        "university health service": "student_wellbeing.html",
+        "uhs": "student_wellbeing.html",
+        "recreational sports": "student_wellbeing.html",
+        "nutrition resources": "student_wellbeing.html",
+        "caps": "student_wellbeing.html",
+        "counseling": "student_wellbeing.html",
+        "wellness coaching": "student_wellbeing.html",
+        "mindfulness": "student_wellbeing.html",
+        "support groups": "student_wellbeing.html",
+        "student life well-being": "student_wellbeing.html",
+    };
+
+
+    // Function to perform search
+    function performSearch(event) {
+        const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+
+        event.preventDefault();
+        
+        // Search for a matching keyword
+        for (const keyword in pages) {
+            if (searchQuery.includes(keyword)) {
+                console.log("redirecting to:", pages[keyword])
+                window.location.href = pages[keyword];
+                return;
+            }
+            else {
+                window.location.href = '404.html'
+            }
+        }
+        
+    }
+</script>
 </html>
